@@ -1,0 +1,89 @@
+.advent-app {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  /* height: calc(100vh - 5rem); */
+}
+
+/* Hidden class */
+.advent-app .hidden {
+  display: none;
+}
+
+/* Heading copy */
+.advent-app #title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  color: rgb(207, 32, 32);
+  text-align: center;
+  width: 25ch;
+  word-wrap: break-word;
+}
+
+/* "Click me" link */
+.advent-app > p {
+  font-size: 4rem;
+  text-decoration: none;
+  color: green;
+  margin-top: 3rem;
+}
+
+/* Note wrapper */
+.advent-app #overlay {
+  position: absolute;
+  top: 30rem;
+  height: auto;
+  width: 65ch;
+  border: 1px solid green;
+  background-color: rgb(224, 0, 0, .75);
+  animation: fadeIn 4s;
+  padding: 0 3rem;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Note copy */
+.advent-app #overlay p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Fir tree image */
+.advent-app img {
+  width: 15rem;
+  height: 100%;
+  max-height: 510px;
+  text-align: center;
+}
+
+/* Mobile viewports */
+@media (max-width: 769px) {
+  .advent-app {
+
+  }
+
+  /* Heading copy */
+  .advent-app #title {
+    font-size: 3rem;
+    width: unset;
+    margin-top: 1rem
+  }
+
+  /* "Click" link */
+  .advent-app > p {
+    font-size: 4rem;
+  }
+
+  /* Note wrapper */
+  .advent-app #overlay {
+    width: 100%;
+    top: 35rem;
+  }
+}
