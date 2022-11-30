@@ -1,7 +1,6 @@
 // Libraries
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Snowfall from 'react-snowfall';
 
 // Components
 import AdventApp from './AdventApp';

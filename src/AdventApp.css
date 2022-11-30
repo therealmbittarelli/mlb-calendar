@@ -65,9 +65,6 @@
 
 /* Mobile viewports */
 @media (max-width: 769px) {
-  .advent-app {
-
-  }
 
   /* Heading copy */
   .advent-app #title {
