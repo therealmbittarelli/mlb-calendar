@@ -19,10 +19,10 @@ function AdventApp() {
   const dailyData = [
     {
       'date': '11/30',
-      'number': 'billionth',
-      'copy': "click the tree!",
-      'url': 'https://imgur.com/gallery/VPf08JN',
-      'note': 'I love this song. It reminds me of some of the smiley-est and most silly-fun moments we\'ve had together, usually dancing at someone\'s wedding.'
+      'number': 'Novemberth',
+      'copy': "not time to click the tree yet!",
+      'url': 'https://www.youtube.com/watch?v=i7pMz74EpPA',
+      'note': 'Not yet!'
     },
     {
       'date': '12/1',
