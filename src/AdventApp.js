@@ -18,7 +18,7 @@ function AdventApp() {
   // Set data object for each advent day
   const dailyData = [
     {
-      'date': '11/17',
+      'date': '11/30',
       'number': 'billionth',
       'copy': "click the tree!",
       'url': 'https://imgur.com/gallery/VPf08JN',
@@ -105,7 +105,8 @@ function AdventApp() {
       'date': '12/12',
       'number': 'twelfth',
       'copy': "click the tree!",
-      'url': 'http://www.google.com'
+      // Amazon Trail
+      'url': 'https://playonline-games.com/amazon-trail/'
     },
     {
       'date': '12/13',
@@ -125,7 +126,8 @@ function AdventApp() {
       'date': '12/15',
       'number': 'fifteenth',
       'copy': "click the tree!",
-      'url': 'https://youtu.be/d0AAECyXT0Y'
+      // Cat on ice
+      'url': 'https://imgur.com/gallery/3HEmueb'
     },
     {
       'date': '12/16',
@@ -159,7 +161,8 @@ function AdventApp() {
       'date': '12/20',
       'number': 'twentieth',
       'copy': "click the tree!",
-      'url': 'https://www.google.com'
+      // Bird pops the bubble
+      'url': 'https://imgur.com/gallery/l3eOpXz'
     },
     {
       'date': '12/21',
@@ -172,19 +175,22 @@ function AdventApp() {
       'date': '12/22',
       'number': 'twenty second',
       'copy': "click the tree!",
-      'url': 'http://www.google.com'
+      // Adventures of Tin Tin channel
+      'url': 'https://www.youtube.com/@rebekahmathew9810/search?query=tin%20tin'
     },
     {
       'date': '12/23',
       'number': 'twenty third',
       'copy': "click the tree!",
-      'url': 'http://www.google.com'
+      // Jealous golden
+      'url': 'https://www.youtube.com/watch?v=cIsyOKU0vRQ'
     }, 
     {
       'date': '12/24',
       'number': 'twenty fourth',
       'copy': "click the tree!",
-      'url': 'http://www.google.com'
+      // Christmas playlist
+      'url': 'https://www.youtube.com/watch?v=fcg2UhhA5Jg'
     }
   ];
 
