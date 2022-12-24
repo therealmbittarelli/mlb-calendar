@@ -190,7 +190,7 @@ function AdventApp() {
       'number': 'twenty fourth',
       'copy': "click the tree!",
       // Christmas playlist
-      'url': 'https://www.youtube.com/watch?v=fcg2UhhA5Jg'
+      'url': 'https://youtube.com/playlist?list=PLBN3i8jrg4Wze3v_KZRPFmnQrTw5jia61'
     }
   ];
 
