@@ -1,11 +1,4 @@
 .advent-app {
-  /* text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative; */
-  /* height: calc(100vh - 5rem); */
   background-image: url('./house-sketch.png');
   background-size: cover;
   height: 100vh;
@@ -18,85 +11,64 @@
   display: none;
 }
 
-/* Heading copy */
-.advent-app #title {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4.5rem;
-  color: rgb(207, 32, 32);
-  text-align: center;
-  width: 25ch;
-  word-wrap: break-word; */
+.advent-app > a {
+  margin: 0 auto;
+}
+.advent-app > img {
+  width: 7rem;
+  height: auto;
+}
+.advent-app p {
+  margin: 0 auto;
 }
 
-/* "Click me" link */
-.advent-app > p {
-  /* font-size: 4rem;
-  text-decoration: none;
-  color: green;
-  margin-top: 3rem; */
+/* Copy */
+.advent-app p#copy {
+  font-family: 'Mountains of Christmas', serif;
+  font-size: 3rem;
+  text-align: center;
 }
 
 /* Note wrapper */
-.advent-app #overlay {
-  /* position: absolute;
-  top: 30rem;
-  height: auto;
-  width: 65ch;
-  border: 1px solid green;
-  background-color: rgb(224, 0, 0, .75);
-  animation: fadeIn 4s;
-  padding: 0 3rem; */
+.advent-app p#note {
 }
+
 /* @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 } */
 
-/* Note copy */
-.advent-app #overlay p {
-  /* font-size: 1.5rem;
-  color: white; */
-}
 
-/* Fir tree image */
-/* .advent-app img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-} */
-
+/* Heading */
 .advent-app h1 {
   font-family: 'Mountains of Christmas', serif;
   font-size: 6rem;
   text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 7rem;
 }
 .advent-app h1#advent {
-  margin-top: 10rem;
 }
 .advent-app h1#early {
-  margin-top: auto;
-  margin-bottom: auto;
+  /* margin-top: auto;
+  margin-bottom: auto; */
 }
 /* Mobile viewports */
 @media (max-width: 769px) {
 
-  /* Heading copy */
-  .advent-app #title {
-    /* font-size: 3rem;
-    width: unset;
-    margin-top: 1rem */
+  /* Heading */
+  .advent-app h1 {
+    font-size: 4rem;
   }
 
-  /* "Click" link */
-  .advent-app > p {
-    /* font-size: 4rem; */
+  /* Copy */
+  .advent-app p#copy {
+    font-size: 2rem;
+    justify-content: center;
   }
 
   /* Note wrapper */
-  .advent-app #overlay {
-    /* width: 100%;
-    top: 35rem; */
+  .advent-app p#note {
+    justify-content: center;
   }
 }

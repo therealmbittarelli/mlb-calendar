@@ -3,7 +3,8 @@ import Lights from './Lights.js';
 import './AdventApp.css';
 import './index.css';
 import './Lights.css'
-import image from './house-sketch.png';
+import image from './copper-santa.png';
+import fingerWag from './finger-shake-babu.gif';
 import dailyData from './data.json';
 
 // Libraries
@@ -46,9 +47,11 @@ function AdventApp() {
       </p>
     </div>;
 
+  let linkImage = todaysData.date == "not december!" ? fingerWag : image;
+
   // Render page content
   return (
-    
+
     <div className="advent-app">
 
       {/* Lights */}
@@ -61,21 +64,15 @@ function AdventApp() {
 
       {headerCopy}
 
-      {/* <a 
-        id="daily-content" 
-        href={`${todaysData.url}`} 
-        rel="noreferrer noopener"
-        target="_blank"
-      > */}
-        {/* <img
-          src={image}
-          alt="An AI-generated black and white sketch of our home."
-        /> */}
-      {/* </a> */}
-      <p>
+      <a href={todaysData.url || ''}>
+        <img src={linkImage} alt="Copper dog wearing a santa hat" />
+      </a>
+      <p id="copy">
         {todaysData.copy}
       </p>
+      <p id="note">
         {todaysData.note ? note : ''}
+      </p>
 
     </div>
   );
