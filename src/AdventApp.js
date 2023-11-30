@@ -47,7 +47,7 @@ function AdventApp() {
       </p>
     </div>;
 
-  let linkImage = todaysData.date == "not december!" ? fingerWag : image;
+  let linkImage = todaysData.date === "not december!" ? fingerWag : image;
 
   // Render page content
   return (

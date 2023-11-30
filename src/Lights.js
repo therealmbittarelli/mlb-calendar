@@ -39,7 +39,10 @@ const Lights = () => {
       theme = 'thanksgiving';
       break;
     case 12:
-      theme = 'xmas'
+      theme = 'xmas';
+      break;
+    default:
+      theme = 'xmas';
   }
   
   return (
