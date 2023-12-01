@@ -49,6 +49,13 @@ function AdventApp() {
 
   let linkImage = todaysData.date === "not december!" ? fingerWag : image;
 
+  let copperImage = todaysData.url === "" ? 
+    <img src={linkImage} alt="Copper dog wearing a santa hat" id="copper-image" /> :
+    <a href={todaysData.url || ''}>
+      <img src={linkImage} alt="Copper dog wearing a santa hat" />
+    </a>;
+
+
   // Render page content
   return (
 
@@ -64,9 +71,8 @@ function AdventApp() {
 
       {headerCopy}
 
-      <a href={todaysData.url || ''}>
-        <img src={linkImage} alt="Copper dog wearing a santa hat" />
-      </a>
+      {copperImage}
+
       <p id="copy">
         {todaysData.copy}
       </p>

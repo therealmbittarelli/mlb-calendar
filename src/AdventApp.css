@@ -18,6 +18,10 @@
   width: 7rem;
   height: auto;
 }
+.advent-app #copper-image {
+  margin: 0 auto;
+}
+
 .advent-app p {
   margin: 0 auto;
 }
