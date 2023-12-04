@@ -10,14 +10,14 @@
   {
     "date": "12/1",
     "number": "first",
-    "copy": "...my true love gave to me a big hug and a smooch or two! Come find me so I can lay one on ya.",
+    "copy": "",
     "description": "free hug and smooch",
     "url": ""
   },
   {
     "date": "12/2",
     "number": "second",
-    "copy": "updated",
+    "copy": "",
     "description": "Dog stops tiger/lion fight",
     "url": "https://imgur.com/gallery/5lTuvZz"
   },
@@ -31,9 +31,9 @@
   {
     "date": "12/4",
     "number": "fourth",
-    "copy": "click the tree!",
-    "description": "hot chocolate recipe",
-    "url": "https://spoonuniversity.com/recipe/simpsons-inspired-fluffernutter-hot-chocolate"
+    "copy": "A treat is waiting for you! Check the dry sink :)",
+    "description": "ginger beer",
+    "url": ""
   },
   {
     "date": "12/5",
@@ -80,6 +80,7 @@
   {
     "date": "12/11",
     "number": "eleventh",
+    "copy": "",
     "description": "Water park day for dogs",
     "url": "https://imgur.com/gallery/JbfYspV"
   },
