@@ -44,38 +44,24 @@ const Lights = () => {
     default:
       theme = 'xmas';
   }
+
+  let generateLights = () => {
+    let lights = [];
+    for (let i = 0; i < 28; i++) {
+      console.log('i')
+      let dynamicClass;
+      if (i > 7) {
+        dynamicClass = 'desktop-only'
+      }
+      lights.push(<li className={dynamicClass}></li>)
+    }
+    console.log(lights)
+    return lights;
+  }
   
   return (
     <ul id="lights" className={theme} >
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      {generateLights()}
     </ul>
   );
 }

@@ -11,19 +11,16 @@
   display: none;
 }
 
-.advent-app > a {
-  margin: 0 auto;
+.advent-app > section {
+  margin-top: 50px;
+  gap: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .advent-app > img {
   width: 7rem;
   height: auto;
-}
-.advent-app #copper-image {
-  margin: 0 auto;
-}
-
-.advent-app p {
-  margin: 0 auto;
 }
 
 /* Copy */
@@ -59,6 +56,11 @@
 }
 /* Mobile viewports */
 @media (max-width: 769px) {
+
+  .advent-app > section {
+    margin-top: 25px;
+    gap: 40px;
+  }
 
   /* Heading */
   .advent-app h1 {

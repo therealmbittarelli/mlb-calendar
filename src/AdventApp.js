@@ -69,16 +69,19 @@ function AdventApp() {
         <Snowfall />
       </div>
 
-      {headerCopy}
+      <section>
+        {headerCopy}
 
-      {copperImage}
+        {copperImage}
 
-      <p id="copy">
-        {todaysData.copy}
-      </p>
-      <p id="note">
-        {todaysData.note ? note : ''}
-      </p>
+        <p id="copy">
+          {todaysData.copy}
+        </p>
+        <p id="note">
+          {todaysData.note ? note : ''}
+        </p>
+
+      </section>
 
     </div>
   );
