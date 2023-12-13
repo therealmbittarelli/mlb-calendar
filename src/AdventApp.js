@@ -14,7 +14,7 @@ import Snowfall from 'react-snowfall';
  * Renders the main content of the page.
  */
 function AdventApp() {
-  if ('no' == 'no') {
+  if (1 > 0) {
     return null;
   }
   // Build formatted date (m/dd)
