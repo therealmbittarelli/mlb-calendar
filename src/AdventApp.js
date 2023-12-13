@@ -14,6 +14,9 @@ import Snowfall from 'react-snowfall';
  * Renders the main content of the page.
  */
 function AdventApp() {
+  if ('no' == 'no') {
+    return null;
+  }
   // Build formatted date (m/dd)
   const date = new Date();
   const month = date.getUTCMonth() + 1;
