@@ -78,7 +78,7 @@ function AdventApp() {
         {copperImage}
 
         <p id="copy">
-          {todaysData.copy}
+          {todaysData.copy ? copy : ''}
         </p>
         <p id="note">
           {todaysData.note ? note : ''}
