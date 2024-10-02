@@ -14,9 +14,9 @@ import Snowfall from 'react-snowfall';
  * Renders the main content of the page.
  */
 function AdventApp() {
-  if (1 > 0) {
-    return null;
-  }
+  // if (1 > 0) {
+  //   return null;
+  // }
   // Build formatted date (m/dd)
   const date = new Date();
   const month = date.getUTCMonth() + 1;
@@ -32,6 +32,7 @@ function AdventApp() {
   let todaysData = {};
   // Grab today-specific data
   for (let entry of dailyData) {
+    console.log('entry', entry)
     if (entry.date === formattedDate) {
       todaysData = entry;
     }
@@ -58,7 +59,6 @@ function AdventApp() {
       <img src={linkImage} alt="Copper dog wearing a santa hat" />
     </a>;
 
-
   // Render page content
   return (
 
@@ -78,10 +78,10 @@ function AdventApp() {
         {copperImage}
 
         <p id="copy">
-          {todaysData.copy ? copy : ''}
+          {todaysData?.copy ? todaysData.copy : ''}
         </p>
         <p id="note">
-          {todaysData.note ? note : ''}
+          {todaysData?.note ? note : ''}
         </p>
 
       </section>

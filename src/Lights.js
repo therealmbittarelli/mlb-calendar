@@ -33,7 +33,7 @@ const Lights = () => {
       theme = 'autumn';
       break;
     case 10:
-      theme = 'halloween';
+      theme = 'xmas';
       break;
     case 11:
       theme = 'thanksgiving';
