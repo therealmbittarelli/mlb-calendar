@@ -9,20 +9,18 @@ import dailyData from './data.json';
 
 // Libraries
 import Snowfall from 'react-snowfall';
+import { useEffect, useMemo, useState } from 'react';
 
 /**
  * Renders the main content of the page.
  */
 function AdventApp() {
-  // if (1 > 0) {
-  //   return null;
-  // }
   // Build formatted date (m/dd)
   const date = new Date();
   const month = date.getUTCMonth() + 1;
   let formattedDate = 'not december!';
 
-  // If it's december, update `day` and `formattedDate` accordingly
+  // If it's December, update `day` and `formattedDate` accordingly
   if (month === 12) {
     let day = date.getUTCDate();
     formattedDate = `${month}/${day}`;
@@ -32,7 +30,6 @@ function AdventApp() {
   let todaysData = {};
   // Grab today-specific data
   for (let entry of dailyData) {
-    console.log('entry', entry)
     if (entry.date === formattedDate) {
       todaysData = entry;
     }
@@ -44,12 +41,16 @@ function AdventApp() {
     headerCopy = <h1 id="early">Someone has arrived a bit early...</h1>
   }
 
-  let note =
-    <div id="overlay">
-      <p>
-        {todaysData.note}
-      </p>
-    </div>;
+  // Additional note
+  let note;
+  if (todaysData?.note) {
+    note = 
+      <div id="overlay">
+        <p>
+          {todaysData?.note}
+        </p>
+      </div>;
+  }
 
   let linkImage = todaysData.date === "not december!" ? fingerWag : image;
 
