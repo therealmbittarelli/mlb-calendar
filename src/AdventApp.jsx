@@ -70,8 +70,7 @@ function AdventApp() {
         <Snowfall />
       </div>
 
-      {generateLink()}
-      {/* {isDecember && generateLink()} */}
+      {isDecember && generateLink()}
 
     </div>
   );
