@@ -53,7 +53,7 @@ const Lights = () => {
       if (i > 7) {
         dynamicClass = 'desktop-only'
       }
-      lights.push(<li className={dynamicClass}></li>)
+      lights.push(<li key={`lights-${i}`} className={dynamicClass}></li>)
     }
     console.log(lights)
     return lights;
