@@ -9,7 +9,6 @@ import dailyData from './data.json';
 
 // Libraries
 import Snowfall from 'react-snowfall';
-import { useEffect, useMemo, useState } from 'react';
 
 /**
  * Renders the main content of the page.
