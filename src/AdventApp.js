@@ -1,14 +1,11 @@
-import Lights from './Lights.js';
 // CSS and assets
 import './AdventApp.css';
-import './index.css';
-import './Lights.css'
-import image from './copper-santa.png';
-import fingerWag from './finger-shake-babu.gif';
-import dailyData from './data.json';
 
 // Libraries
 import Snowfall from 'react-snowfall';
+
+// Data
+import data from './data.json';
 
 /**
  * Renders the main content of the page.
@@ -17,7 +14,8 @@ function AdventApp() {
   // Build formatted date (m/dd)
   const date = new Date();
   const month = date.getUTCMonth() + 1;
-  let formattedDate = 'not december!';
+  const day = date.getUTCDate();
+  let formattedDate = `${month}/${day}`;
 
   // If it's December, update `day` and `formattedDate` accordingly
   if (month === 12) {
@@ -28,17 +26,14 @@ function AdventApp() {
   // Initialize object to hold today-specific data
   let todaysData = {};
   // Grab today-specific data
-  for (let entry of dailyData) {
+  for (let entry of data) {
     if (entry.date === formattedDate) {
       todaysData = entry;
     }
   }
 
   // Copy
-  let headerCopy = <h1 id="advent">On the {todaysData.number} day of Christmas...</h1>
-  if (todaysData.number === 'doh') {
-    headerCopy = <h1 id="early">Someone has arrived a bit early...</h1>
-  }
+  let headerCopy = `On the ${todaysData.number} day of Christmas, your true love sent to you...`
 
   // Additional note
   let note;
@@ -51,7 +46,7 @@ function AdventApp() {
       </div>;
   }
 
-  let linkImage = todaysData.date === "not december!" ? fingerWag : image;
+  let linkImage = todaysData.date === "not december!" ? '' : '';
 
   let copperImage = todaysData.url === "" ? 
     <img src={linkImage} alt="Copper dog wearing a santa hat" id="copper-image" /> :
@@ -61,19 +56,14 @@ function AdventApp() {
 
   // Render page content
   return (
-
     <div className="advent-app">
-
-      {/* Lights */}
-      <Lights/>
-
-      {/* Snow */}
       <div className="snowfall">
         <Snowfall />
       </div>
 
-      <section>
+      <h1 id="title">
         {headerCopy}
+      </h1>
 
         {copperImage}
 
@@ -83,8 +73,6 @@ function AdventApp() {
         <p id="note">
           {todaysData?.note ? note : ''}
         </p>
-
-      </section>
 
     </div>
   );
