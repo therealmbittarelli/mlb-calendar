@@ -1,16 +1,29 @@
-// CSS and assets
-import './AdventApp.css';
-import ornament from './ornament.webp';
+/**
+ * MLB Advent Calendar - 2024
+ *
+ * @module /src/AdventApp.jsx
+ */
 
+//------------------------------------------------------------------------------
+// Imports
+//------------------------------------------------------------------------------
 // Libraries
 import Snowfall from 'react-snowfall';
 import { useState } from 'react';
 
+// CSS and assets
+import './AdventApp.css';
+import ornament from './ornament.webp';
+
 // Data
 import data from './data.json';
 
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 /**
- * Renders the main content of the page.
+ * @component AdventApp
+ * @description The site's main content, including animated snowfall and linked image.
  */
 function AdventApp() {
 
@@ -19,7 +32,7 @@ function AdventApp() {
   // Initialize object to hold the current day's data - date, link, etc
   let todaysData = {};
 
-  // Build formatted date (m/dd)
+  // Build formatted today's date (m/dd)
   const date = new Date();
   const month = date.getUTCMonth() + 1;
   const day = date.getUTCDate();
@@ -35,7 +48,7 @@ function AdventApp() {
     formattedDate = `${month}/${day}`;
   }
 
-  // Populate `todaysData`
+  // Populate `todaysData`, which will inform which link is available
   for (let entry of data) {
     if (entry.date === formattedDate) {
       todaysData = entry;
@@ -47,9 +60,13 @@ function AdventApp() {
    * @returns {jsx} Ornament link jsx.
    */
   const generateLink = () => {
+    // If it's not December, don't render a number on the ornament
     let copy = isDecember ? day : '';
+
+    // If it's not December, link to a counter that displays time till Dec 1 2024
     let link = isDecember ? todaysData.url : 'https://0521940382764bd5bbeef30e05fcefff.elf.site';
 
+    // Return a linked ornament image
     return (
       <a
         href={link}
