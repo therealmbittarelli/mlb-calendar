@@ -1,3 +1,5 @@
+/* Styles for /src/AdventApp.jsx */
+
 .advent-app {
   text-align: center;
   flex-direction: column;
@@ -27,7 +29,6 @@
   animation: fadeInOut 1s;
   height: 200px;
 }
-
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; }
   50% { opacity: 1, 1; }
