@@ -34,8 +34,9 @@ function AdventApp() {
 
   // Build formatted today's date (m/dd)
   const date = new Date();
-  const month = date.getUTCMonth() + 1;
+  const month = date.getUTCMonth();
   const day = date.getUTCDate();
+
   let formattedDate = `${month}/${day}`;
 
   // If it's December, update `day` and `formattedDate` accordingly
