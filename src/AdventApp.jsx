@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 // Libraries
 import Snowfall from 'react-snowfall';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // CSS and assets
 import './AdventApp.css';
@@ -34,20 +34,18 @@ function AdventApp() {
 
   // Build formatted today's date (m/dd)
   const date = new Date();
-  const month = date.getUTCMonth();
+  const month = date.getUTCMonth() +1;
   const day = date.getUTCDate();
 
   let formattedDate = `${month}/${day}`;
 
-  // If it's December, update `day` and `formattedDate` accordingly
-  if (month === 12) {
-    // Update state
-    setIsDecember(true);
-
-    // Format date
-    let day = date.getUTCDate();
-    formattedDate = `${month}/${day}`;
-  }
+  // If it's December, update state accordingly
+  useEffect(() => {
+    if (month === 12) {
+      // Update state
+      setIsDecember(true);
+    }
+  }, [month]);
 
   // Populate `todaysData`, which will inform which link is available
   for (let entry of data) {
